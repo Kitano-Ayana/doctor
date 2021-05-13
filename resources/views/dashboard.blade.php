@@ -25,7 +25,7 @@
         <link rel="stylesheet" href="{{ asset('template/plugins/owl.carousel/dist/assets/owl.carousel.min.css') }}">
         <link rel="stylesheet" href="{{ asset('template/plugins/owl.carousel/dist/assets/owl.theme.default.min.css') }}">
         <link rel="stylesheet" href="{{ asset('template/dist/css/theme.min.css') }}">
-        <script src="src/js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="{{ asset('template/src/js/vendor/modernizr-2.8.3.min.js') }} "></script>
     </head>
 
     <body>
@@ -1148,8 +1148,7 @@
             </div>
         </div>
         
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script>window.jQuery || document.write('<script src="src/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>        <script>window.jQuery || document.write('<script src="src/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
         <script src="{{ asset('template/plugins/popper.js/dist/umd/popper.min.js') }}"></script>
         <script src="{{ asset('template/plugins/bootstrap/dist/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('template/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js') }}"></script>
@@ -1159,7 +1158,7 @@
         <script src="{{ asset('template/plugins/datatables.net-responsive/js/dataTables.responsive.min.js') }}"></script>
         <script src="{{ asset('template/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js') }}"></script>
         <script src="{{ asset('template/plugins/jvectormap/jquery-jvectormap.min.js') }}"></script>
-        <script src="{{ asset('template/plugins/jvectormap/tests/assets/jquery-jvectormap-world-mill-en.js') }}"></script>
+        <script src="{{ asset('template/plugins/jvectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
         <script src="{{ asset('template/plugins/moment/moment.js') }}"></script>
         <script src="{{ asset('template/plugins/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js') }}"></script>
         <script src="{{ asset('template/plugins/d3/dist/d3.min.js') }}"></script>
@@ -1167,7 +1166,7 @@
         <script src="{{ asset('template/js/tables.js') }}"></script>
         <script src="{{ asset('template/js/widgets.js') }}"></script>
         <script src="{{ asset('template/js/charts.js') }}"></script>
-        <script src="{{ asset('template/dist/js/theme.min.js') }}F"></script>
+        <script src="{{ asset('template/dist/js/theme.min.js') }}"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
