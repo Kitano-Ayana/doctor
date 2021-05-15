@@ -30,3 +30,6 @@ Route::group(['middleware' =>['auth', 'admin']],function(){
     Route::resource('doctor','DoctorController');
 });
 
+Route::resource('appointment','AppointmentController');
+
+

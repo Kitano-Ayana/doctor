@@ -1148,8 +1148,7 @@
             </div>
         </div>
         
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>        <script>window.jQuery || document.write('<script src="src/js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-        <script src="{{ asset('template/plugins/popper.js/dist/umd/popper.min.js') }}"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>        <script src="{{ asset('template/plugins/popper.js/dist/umd/popper.min.js') }}"></script>
         <script src="{{ asset('template/plugins/bootstrap/dist/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('template/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js') }}"></script>
         <script src="{{ asset('template/plugins/screenfull/dist/screenfull.js') }}"></script>
