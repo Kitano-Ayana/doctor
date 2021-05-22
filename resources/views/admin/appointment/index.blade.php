@@ -33,6 +33,12 @@
                 {{ Session::get('message')}}
             </div>
         @endif
+        @if(Session::has('errmessage'))
+            <div class="alert bg-danger alert-success text-white">
+                {{ Session::get('errmessage')}}
+            </div>
+        @endif
+
         @foreach($errors->all() as $error)
          <div class="alert alert-danger">
            {{ $error }}
@@ -40,22 +46,24 @@
         @endforeach
 
     <form action="{{ route('appointment.check') }}" method="post">
-        @csrf
-    <div class="card">
-        <div class="card-header">
-            Choose Date
-            <br>
-            @if(isset($date))
-            Your timetable for: {{$date }}
-            @endif
+            @csrf
+        <div class="card">
+            <div class="card-header">
+                Choose Date
+                <br>
+                @if(isset($date))
+                Your timetable for: {{$date }}
+                @endif
+            </div>
+            <div class="card-body">
+                <input type="text" class="form-control datetimepicker-input" id="datepicker" data-toggle="datetimepicker" data-target="#datepicker" name="date">
+                <br>
+                <button type="submit" class="btn btn-primary">check</button>
+            </div>
         </div>
-        <div class="card-body">
-            <input type="text" class="form-control datetimepicker-input" id="datepicker" data-toggle="datetimepicker" data-target="#datepicker" name="date">
-            <br>
-            <button type="submit" class="btn btn-primary">check</button>
-        </div>
-    </div>
     </form>
+    @if(Route::is('appointment.check'))
+    <form action="{{ route('update') }}" method="post">@csrf
     <div class="card">
         <div class="card-header">
             Choose AM time
@@ -67,6 +75,7 @@
         <div class="card-body">
             <table class="table table-striped">
                 <tbody>
+                <input type="hidden" name="appointmentId" value="{{ $appointmentId }}">
                     <tr>
                         <th scope="row">1</th>
                         <td><input type="checkbox" name="time[]" class="form-control" value="6am" @if(isset($times)) {{ $times->contains('time','6am')?'checked':''}} @endif >6am</td>
@@ -178,6 +187,8 @@
 
 
 </div>
+</form>
+@endif
 <style type="text/css">
   input[type="checkbox"]{
       zoom:1.5;

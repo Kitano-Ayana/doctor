@@ -116,4 +116,18 @@ class AppointmentController extends Controller
 
         return view('admin.appointment.index',compact('times','appointmentId','date'));
     }
+
+    public function updateTIme(Request $request){
+        $appointmentId = $request->appointmentId;
+        $appointment = Time::Where('appointment_id',$appointmentId)->delete();
+        foreach($request->time as $time){
+            Time::create([
+               'appointment_id' => $appointmentId,
+               'time' => $time,
+               'status' => 0
+                 ]);
+        }
+
+        return redirect()->route('appointment.index')->with('message', 'Appointment time updated!');
+    } 
 }
