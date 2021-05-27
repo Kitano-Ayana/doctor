@@ -42,7 +42,7 @@
     <form action="{{ route('appointment.store') }}" method="post">
         @csrf
     <div class="card">
-        <div class="card-header">
+        <div class="card-header"> 
             Choose Date
         </div>
         <div class="card-body">
