@@ -206,7 +206,7 @@
              <td>{{ $appointment->doctor->name }}</td>
              <td>{{ $appointment->date }}</td>
              <td>
-                 <form action="{{ route('appointment.check') }}">
+                 <form action="{{ route('appointment.check') }}"> 
                      @csrf
                      <input type="hidden" name="date" value="{{ $appointment->date">
                         <button type="submit" class="btn btn-primary">View Update</button>
