@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Auth;
+use Illuminate\Http\RedirectResponse;
 
 class Admin
 {
@@ -18,6 +19,8 @@ class Admin
     {
         if(Auth::user()->role->name == "admin"){
             return $next($request);
+        }else{
+            return redirect()->back();
         }
     }
 }
